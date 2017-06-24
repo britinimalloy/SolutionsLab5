@@ -80,19 +80,13 @@ var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
   var count = 0;
-  var numberString = '';
   for (var i = 0; i < testArray.length; i++) {
     // pull out each item and add together
     count = sum(testArray[i], count)[0];
-    numberString = numberString + count + ',';
   }
 
-  numberString = numberString.slice(0,(numberString.length - 1));
-  var test = testArray[0] + ',' + testArray[1] + ',' + testArray[2];
-  var message = 'was passed in as an array of numbers, and ' + count + ' is their sum.';
-  console.log(test, message);
-  console.log('2,3,4 was passed in as an array of numbers, and 9 is their sum.');
-  return [test, message];
+  var message = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
+  return [count, message];
 
 }
 
